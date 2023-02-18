@@ -84,6 +84,7 @@ const Register = () => {
                   value={user.name}
                   onChange={handleChange}
                   required
+                  autoComplete="username"
                 />
               </div>
               <div className="mainEmail">
@@ -99,6 +100,7 @@ const Register = () => {
                   onChange={handleChange}
                   maxLength={50}
                   required
+                  autoComplete="email"
                 />
               </div>
               <div className="mainPassword">
@@ -116,6 +118,7 @@ const Register = () => {
                     value={user.password}
                     onChange={handleChange}
                     required
+                    autoComplete="password"
                   />
                   {isPasswordShow ? (
                     <BsFillEyeSlashFill
