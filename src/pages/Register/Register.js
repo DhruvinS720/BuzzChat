@@ -45,7 +45,7 @@ const Register = () => {
     axios
       .post(`/user/register`, user)
       .then((response) => {
-        console.log(response);
+//         console.log(response);
         alert("Registered Succesfully");
         navigate("/Login");
       })
@@ -53,7 +53,7 @@ const Register = () => {
         if (error.response.data.message) {
           alert(error.response.data.message);
         } else {
-          console.log(error);
+//           console.log(error);
         }
       });
   };
