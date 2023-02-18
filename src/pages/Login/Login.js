@@ -97,6 +97,7 @@ const Login = () => {
                   value={user.email}
                   onChange={handleChange}
                   required
+                  autoComplete="email"
                 />
               </div>
               <div className="mainPassword">
@@ -118,6 +119,7 @@ const Login = () => {
                     onChange={handleChange}
                     maxLength={20}
                     required
+                    autoComplete="password"
                   />
                   {isPasswordShow ? (
                     <BsFillEyeSlashFill
