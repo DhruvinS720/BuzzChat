@@ -1,0 +1,272 @@
+.bgLogin {
+    background-color: #4EAC6D;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginMain {
+    background-color: #fff;
+    padding: 24px !important;
+    border-radius: 16px;
+    margin: 0px 24px;
+}
+
+.loginWelcome {
+    text-align: center;
+    margin-top: 48px !important;
+}
+
+.loginTitle {
+    color: #495057;
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.loginContinue {
+    color: #797c8c !important;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.mainForm {
+    display: flex;
+    justify-content: center;
+}
+
+.loginForm {
+    padding: 36px 0 48px;
+    width: 335px;
+}
+
+.mainUser,
+.mainEmail,
+.mainPassword {
+    margin-bottom: 16px;
+}
+
+.formLabel {
+    font-size: 15px;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 8px;
+    user-select: none
+}
+
+.forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.forgetPassword {
+    color: #797c8c !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e6ebf5;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.mainEye {
+    position: relative;
+}
+
+.mainEye .eye {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    transform: translate(0px, -50%);
+}
+
+#email::placeholder,
+#password::placeholder {
+    color: #797c8c;
+    opacity: 1;
+}
+
+#email:focus,
+#password:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #cfd4dd;
+    outline: 0;
+    box-shadow: none;
+}
+
+.formCheck {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#remember {
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    transition: background-color .15s ease-in-out, background-position .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#remember:checked {
+    background-color: #4eac6d !important;
+    border-color: #4eac6d !important;
+}
+
+#remember:checked[type=checkbox] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3 6-6'/%3E%3C/svg%3E");
+}
+
+.me {
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.termsCondition {
+    text-align: center;
+    font-size: 15px;
+}
+
+.termsCondition .termsLink {
+    color: #4EAC6D;
+    font-weight: 500;
+}
+
+.submitbtn {
+    background-color: rgba(78, 172, 109, 0.9);
+    border-color: rgba(78, 172, 109, 0.9);
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    line-height: 1.5;
+    user-select: none;
+    padding: 8px 16px;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.submitbtn:hover {
+    background-color: rgba(78, 172, 109, 1);
+    border-color: rgba(78, 172, 109, 1);
+}
+
+.submitbtn:focus {
+    outline: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.loginSubmit {
+    margin-top: 24px !important;
+}
+
+.social {
+    position: relative;
+    margin-top: 24px;
+}
+
+.signIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signIn .signTitle {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    padding: 2px 16px;
+    font-size: 14px;
+}
+
+.signIn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    color: #495057;
+    background-color: #f6f6f9;
+    top: 10px;
+}
+
+.socialLogin {
+    display: flex;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+
+.socialBtn {
+    background-color: #f6f6f9;
+    border-color: #f6f6f9;
+    flex: 1 0 0;
+}
+
+.account {
+    margin: 48px 0px;
+}
+
+.account .dont {
+    color: #797c8c !important;
+    text-align: center;
+}
+
+.account .dont .dontLink {
+    color: #4EAC6D;
+    font-weight: 500;
+    text-decoration: underline !important;
+    margin-left: 8px;
+}
+
+.bgLoginImg {
+    max-width: 624px;
+    position: absolute;
+    bottom: 7%;
+    left: -2%;
+}
+
+@media only screen and (max-width:1350px) {
+    .bgLoginImg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1450px) {
+    .bgLoginImg {
+        max-width: 570px;
+    }
+}

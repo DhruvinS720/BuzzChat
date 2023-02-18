@@ -1,0 +1,148 @@
+.mainChatMessageChat {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    height: 12vh;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #eaeaf1;
+    backdrop-filter: blur(7px);
+}
+
+.userDetails h4 {
+    margin-bottom: 0;
+}
+
+.userDetails h4 .userName {
+    color: #495057;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.userIcons {
+    display: flex;
+    align-items: center;
+}
+
+.userIcons .icon {
+    padding: 7px;
+    line-height: 40px;
+    box-shadow: none;
+    font-size: 22px;
+    border-radius: 5px;
+    color: #797c8c;
+    background-color: transparent;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.userIcons .icon:hover {
+    background-color: #797c8c;
+    color: #FFFFFF;
+    transition: all 0.5;
+}
+
+.messageChat {
+    height: 75vh;
+    padding: 0px 24px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.messageChat .mainMessageContainer:first-child {
+    margin-top: 15px;
+}
+
+.messageChat::-webkit-scrollbar {
+    width: 7px;
+}
+
+.messageChat::-webkit-scrollbar-thumb {
+    background-color: rgba(78, 172, 109, 1);
+    border-radius: 5px;
+}
+
+.mainChatMessageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainChatMessage .message {
+    width: 70%;
+    margin-bottom: 24px;
+}
+
+.mainChatMessage .message:last-child {
+    margin-bottom: 10px;
+}
+
+.mainChatMessage .message.receive {
+    margin-right: auto;
+}
+
+.mainChatMessage .message.send {
+    margin-left: auto;
+    text-align: end;
+}
+
+.mainChatMessage .message .msgIn {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.mainChatMessage .message.send .msgIn {
+    background-color: rgba(78, 172, 109, .3);
+    text-align: left;
+}
+
+.mainChatMessage .message.receive .msgIn {
+    background-color: #FFFFFF;
+}
+
+.message .messageTime {
+    display: flex;
+    align-items: center;
+}
+
+.message.send .messageTime {
+    justify-content: end;
+}
+
+.message.receive .messageTime {
+    justify-content: start;
+}
+
+.message .messageTime .timeAgo {
+    font-size: 14px;
+    color: #797c8c !important;
+}
+
+.mrg-right {
+    margin-right: 8px !important;
+}
+
+.message .messageTime .messageUsername {
+    color: #000000;
+    font-weight: 600;
+}
+
+.chatInput {
+    height: 13vh;
+    padding: 24px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid #eaeaf1;
+    backdrop-filter: blur(7px);
+}

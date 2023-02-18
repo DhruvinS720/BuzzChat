@@ -1,0 +1,44 @@
+.mainMessage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.messageDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(78, 172, 109, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 500;
+    height: 90px;
+    width: 90px;
+    margin: 24px;
+}
+
+.messageIcon {
+    font-size: 56px;
+    color: rgba(78, 172, 109, 1);
+    margin-bottom: 5px;
+}
+
+.welcomeTo {
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+    color: #495057;
+}
+
+.selectChat {
+    text-align: center;
+    color: #797c8c;
+}

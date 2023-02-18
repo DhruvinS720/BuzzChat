@@ -1,0 +1,12 @@
+.chatContainer {
+    height: 100vh;
+}
+
+.otherUsersContainer {
+    background-color: #FFFFFF;
+}
+
+.messageContainer {
+    background: url("../../assets/images/message_background.png") #f2f2f2;
+    transition: all .4s;
+}
