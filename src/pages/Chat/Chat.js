@@ -24,10 +24,10 @@ const Chat = () => {
         isOnline: false,
       })
       .then((response) => {
-        console.log(response.data);
+//         console.log(response.data);
       })
       .catch((error) => {
-        console.log(error);
+//         console.log(error);
       });
     console.log(userOffline);
   });
@@ -64,7 +64,7 @@ const Chat = () => {
             localStorage.clear();
             navigate("/login");
           } else {
-            console.log(error);
+//             console.log(error);
           }
         })
         .finally(() => {
