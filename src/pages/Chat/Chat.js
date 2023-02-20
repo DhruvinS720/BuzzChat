@@ -18,20 +18,6 @@ const Chat = () => {
   const navigate = useNavigate();
   const socket = useRef();
 
-  window.addEventListener("beforeunload", async () => {
-    const userOffline = await axios
-      .put(`/user/updateUserOnlineStatus/${currentUser._id}`, {
-        isOnline: false,
-      })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    console.log(userOffline);
-  });
-
   useEffect(() => {
     if (!localStorage.getItem("userData")) {
       navigate("/login");

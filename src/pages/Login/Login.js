@@ -7,6 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import loginGirl from "../../assets/images/girlLogin.png";
 import axios from "../../components/AxiosInstance/AxiosInstance";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -47,9 +49,20 @@ const Login = () => {
         const userData = JSON.stringify(response.data.data);
         localStorage.setItem("userData", userData);
         localStorage.setItem("token", response.data.token);
-        alert("Login Succesfully");
+        toast.success("Login Succesfully", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         const _id = response.data.data._id;
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
         setTimeout(() => {
           localStorage.clear();
         }, 72000000);
@@ -64,7 +77,16 @@ const Login = () => {
       })
       .catch((error) => {
         if (error.response.data.message) {
-          alert(error.response.data.message);
+          toast.error(error.response.data.message, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         } else {
           console.log(error);
         }
@@ -73,6 +95,7 @@ const Login = () => {
 
   return (
     <div className="bgLogin">
+      <ToastContainer />
       <Container>
         <div className="loginMain">
           <div className="loginWelcome">
@@ -97,6 +120,7 @@ const Login = () => {
                   value={user.email}
                   onChange={handleChange}
                   required
+                  autoComplete="email"
                 />
               </div>
               <div className="mainPassword">
@@ -118,6 +142,7 @@ const Login = () => {
                     onChange={handleChange}
                     maxLength={20}
                     required
+                    autoComplete="password"
                   />
                   {isPasswordShow ? (
                     <BsFillEyeSlashFill

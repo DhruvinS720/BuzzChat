@@ -7,6 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import loginGirl from "../../assets/images/girlLogin.png";
 import axios from "../../components/AxiosInstance/AxiosInstance";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -46,12 +48,32 @@ const Register = () => {
       .post(`/user/register`, user)
       .then((response) => {
         console.log(response);
-        alert("Registered Succesfully");
-        navigate("/Login");
+        toast.success("Registered Succesfully", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setTimeout(() => {
+          navigate("/Login");
+        }, 3000);
       })
       .catch((error) => {
         if (error.response.data.message) {
-          alert(error.response.data.message);
+          toast.error(error.response.data.message, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         } else {
           console.log(error);
         }
@@ -60,6 +82,7 @@ const Register = () => {
 
   return (
     <div className="bgRegister">
+      <ToastContainer style={{ fontSize: "14px" }} />
       <Container>
         <div className="registerMain">
           <div className="registerWelcome">
@@ -84,6 +107,7 @@ const Register = () => {
                   value={user.name}
                   onChange={handleChange}
                   required
+                  autoComplete="username"
                 />
               </div>
               <div className="mainEmail">
@@ -99,6 +123,7 @@ const Register = () => {
                   onChange={handleChange}
                   maxLength={50}
                   required
+                  autoComplete="email"
                 />
               </div>
               <div className="mainPassword">
@@ -116,6 +141,7 @@ const Register = () => {
                     value={user.password}
                     onChange={handleChange}
                     required
+                    autoComplete="password"
                   />
                   {isPasswordShow ? (
                     <BsFillEyeSlashFill
