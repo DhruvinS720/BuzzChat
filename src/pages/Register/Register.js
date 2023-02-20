@@ -75,7 +75,7 @@ const Register = () => {
             theme: "light",
           });
         } else {
-          console.log(error);
+          // console.log(error);
         }
       });
   };

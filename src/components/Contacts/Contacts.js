@@ -27,12 +27,12 @@ const Contacts = ({ contacts, currentUser, changeChat }) => {
         isOnline: false,
       })
       .then((response) => {
-        console.log(response.data);
+//         console.log(response.data);
         localStorage.clear();
         navigate("/login");
       })
       .catch((error) => {
-        console.log(error);
+//         console.log(error);
       });
   };
 

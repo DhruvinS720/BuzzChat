@@ -50,7 +50,7 @@ const Chat = () => {
             localStorage.clear();
             navigate("/login");
           } else {
-            console.log(error);
+//             console.log(error);
           }
         })
         .finally(() => {

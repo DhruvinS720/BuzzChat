@@ -69,10 +69,10 @@ const Login = () => {
         axios
           .put(`/user/updateUserOnlineStatus/${_id}`, { isOnline: true })
           .then((response) => {
-            console.log(response.data);
+//             console.log(response.data);
           })
           .catch((error) => {
-            console.log(error);
+//             console.log(error);
           });
       })
       .catch((error) => {
@@ -88,7 +88,7 @@ const Login = () => {
             theme: "light",
           });
         } else {
-          console.log(error);
+//           console.log(error);
         }
       });
   };

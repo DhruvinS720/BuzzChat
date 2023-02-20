@@ -20,11 +20,11 @@ const Messages = ({ currentUser, currentChat, socket }) => {
           to: currentChat._id,
         })
         .then((response) => {
-          console.log(response.data.data);
+//           console.log(response.data.data);
           setAllMessages(response.data.data);
         })
         .catch((error) => {
-          console.log(error);
+//           console.log(error);
         });
     }
   }, [currentChat]);
@@ -44,10 +44,10 @@ const Messages = ({ currentUser, currentChat, socket }) => {
         to: currentChat._id,
       })
       .then((response) => {
-        console.log(response);
+//         console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+//         console.log(error);
       });
 
     socket.current.emit("send-message", {
